@@ -1,2 +1,2 @@
 # Individual_Project_Code
-Repository containing modelling code and input files
+Repository containing modelling code and related files
