@@ -245,8 +245,8 @@ df = pd.DataFrame({"storage state" : step_storage["storage (ASHP)"],
 
 
 #outputs
-# outputs = pd.concat([sh_demand_retrofit, hw_demand_boiler, net_heat_demand, hp_demand_ASHP, hp_demand_GSHP, elec_demand_ASHP, elec_demand_GSHP], axis = 1)
-# outputs.columns = ["space heating demand post retrofit conversion", "hot water demand post boiler efficiency conversion", "net heat demand", "ASHP heat demand", "GSHP heat demand", "ASHP electric demand", "GSHP electric demand"]
-# outputs.to_csv("outputs.csv")
-# step_storage.to_csv("check.csv")
-# b_eff.to_csv("check.csv")
+outputs = pd.DataFrame({"energy demand post building upgrades" : elec_demand_ASHP,
+                        "net renewable energy production" : net_elec_gen,
+                        "supply and demand" : sup_dem,                   
+                        "storage state" : step_storage["storage (ASHP)"]})
+outputs.to_csv("outputs.csv")
