@@ -117,7 +117,7 @@ CoP_GSHP = 8.77 - 0.15 * temp_diff + 0.000734 * pow(temp_diff, 2)
 hp_demand_ASHP = net_heat_demand / CoP_ASHP
 hp_demand_GSHP = net_heat_demand / CoP_GSHP
 
-#Electrical demand post heat pump calculation: 
+#Electrical demand post heat pump calculation:
 elec_demand_ASHP = hp_demand_ASHP + elec_demand
 elec_demand_GSHP = hp_demand_GSHP + elec_demand
 
